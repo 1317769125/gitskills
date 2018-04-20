@@ -1,0 +1,22 @@
+
+过滤 文件里的 root  ---- grep 'root' /etc/passwd
+
+递归过滤 grep -r 'linux' /var/log/
+
+
+管道  cat /etc/passwd | grep ‘root’
+
+
+重定向   echo 'Hello World' > ~/test.txt
+
+网络状态 netstat -lt netstat -tulpn
+
+进程 ps -aux
+
+rpm -qa  查找相关程序
+
+yum list installed   查询已安装的软件
+
+yum remove 卸载安装包
+
+find / -name mysql  查询相关文件

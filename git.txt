@@ -1,0 +1,24 @@
+此实验以 CentOS 7.2 x64 的系统为环境，搭建 git 服务器。
+
+yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel  依赖库
+
+yum install gcc perl-ExtUtils-MakeMaker   编译工具
+
+wget https://www.kernel.org/pub/software/scm/git/git-2.10.0.tar.gz  下载Git
+
+tar -zvxf git-2.10.0.tar.gz  解压
+
+make all prefix=/usr/local/git 编译
+
+make install prefix=/usr/local/git  安装
+
+echo 'export PATH=$PATH:/usr/local/git/bin' >> /etc/bashrc  修改path目录
+
+source /etc/bashrc  生效环境变量
+
+git --version 查看是否成功
+
+useradd -m gituser 创建git账号
+
+passwd gituser 设置密码
+
